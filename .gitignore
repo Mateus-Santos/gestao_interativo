@@ -2,3 +2,4 @@ backup
 dist
 bases
 *ipynb
+__pycache__
