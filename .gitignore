@@ -3,3 +3,4 @@ dist
 bases
 *ipynb
 __pycache__
+.idea/
