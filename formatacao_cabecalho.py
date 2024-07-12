@@ -23,9 +23,7 @@ def alunosLista():
     else:
         dados_lista = dia[dia['HORÁRIO ÍNICIO'].apply(lambda x: time(12, 0) <= x <= time(22, 59))]
 
-    
     dados_lista = dados_lista.drop('DIA', axis=1) #Excluindo a coluna dias que vem junto com a base.
-    #dados_lista.to_excel("./bases/ListaAssinatura.xlsx", index=False, sheet_name='Assinar')
     
     return dados_lista #Retornando a lista
 
@@ -91,8 +89,7 @@ def mesclarPlanilhas():
     fonte_negrito = Font(bold=True)
     format_titulo_cols = Font(size=12, bold=True)
 
-    for row in range(4, mescla.max_row + 1):
-            
+    for row in range(4, mescla.max_row + 1):            
         for col in range(1, 6):
             mescla.cell(row=row, column=col).border = borda
             if (row == 4):
